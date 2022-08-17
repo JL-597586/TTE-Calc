@@ -55,7 +55,7 @@ const Home = () => {
             name="fireRate" 
             onChange={(e) => setForm({...form, fireRate: e.target.value})}
             placeholder="0"
-            type="number"
+            type="string"
             data-testid="form-input-fireRate"
             />
 
@@ -66,7 +66,7 @@ const Home = () => {
             name="damage" 
             onChange={(e) => setForm({...form, damage: e.target.value})}
             placeholder="0"
-            type="number"
+            type="string"
             data-testid="form-input-damage"
             />
 
@@ -77,7 +77,7 @@ const Home = () => {
             name="healthPoints" 
             onChange={(e) => setForm({...form, healthPoints: e.target.value})}
             placeholder="0"
-            type="number"
+            type="string"
             data-testid="form-input-healthPoints"
             />
 
@@ -88,7 +88,7 @@ const Home = () => {
             name="damageReduction" 
             onChange={(e) => setForm({...form, damageReduction: e.target.value})}
             placeholder="1"
-            type="number"
+            type="string"
             data-testid="form-input-damageReduction"
             />
             {/*}
