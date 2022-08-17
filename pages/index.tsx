@@ -7,10 +7,10 @@ import React, {Component} from 'react'
 const Home = () => {
 
   interface FormData {
-    fireRate?: number,
-    damage?: number,
-    healthPoints?: number,
-    damageReduction?: number,
+    fireRate?: 0,
+    damage?: 0,
+    healthPoints?: 0,
+    damageReduction?: 0,
   }
   const [form, setForm] = useState<FormData | null>(null);
 
