@@ -12,10 +12,10 @@ const Home = () => {
     healthPoints: string,
     damageReduction: string,
   }
-  const [form, setForm] = useState<FormData>({fireRate: '1',
-    damage: '1',
-    healthPoints: '1',
-    damageReduction: '1',});
+  const [form, setForm] = useState<FormData>({fireRate: '4',
+    damage: '25',
+    healthPoints: '100',
+    damageReduction: '0',});
 
 
   var AmmoToElim = 0
@@ -65,7 +65,7 @@ const Home = () => {
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="fireRate" 
             onChange={(e) => setForm({...form, fireRate: e.target.value})}
-            placeholder="0"
+            placeholder="4"
             type="string"
             data-testid="form-input-fireRate"
             />
@@ -76,7 +76,7 @@ const Home = () => {
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="damage" 
             onChange={(e) => setForm({...form, damage: e.target.value})}
-            placeholder="0"
+            placeholder="25"
             type="string"
             data-testid="form-input-damage"
             />
@@ -87,7 +87,7 @@ const Home = () => {
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="healthPoints" 
             onChange={(e) => setForm({...form, healthPoints: e.target.value})}
-            placeholder="0"
+            placeholder="100"
             type="string"
             data-testid="form-input-healthPoints"
             />
@@ -98,7 +98,7 @@ const Home = () => {
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="damageReduction" 
             onChange={(e) => setForm({...form, damageReduction: e.target.value})}
-            placeholder="1"
+            placeholder="0"
             type="string"
             data-testid="form-input-damageReduction"
             />
@@ -106,11 +106,11 @@ const Home = () => {
             <button className='w-96 h-10 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300'>Submit</button>
           */}
 
-              <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300'>
+              <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300'>
                 <div className='ml-2'>Projectile-To-Elim:</div>
                 <div className='ml-2'>{AmmoToElimCeiling.toFixed(0)}</div>
               </div>
-              <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300'>
+              <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300'>
                 <div className='ml-2'>Time-To-Elim (s):</div>
                 <div className='ml-2'>{TimeToElim.toFixed(3)}</div>
               </div>
