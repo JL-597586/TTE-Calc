@@ -59,10 +59,10 @@ const Home = () => {
 
         <div className='flex min-w-screen items-center flex-col'>
           <form>
-            <p className='w-96 h-10 text-2xl mx-5 text-sky-300'>Fire-Rate</p>
+            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Fire-Rate</p>
 
             <input 
-            className='w-96 h-10 border-sky-500 border rounded-md mb-5'
+            className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="fireRate" 
             onChange={(e) => setForm({...form, fireRate: e.target.value})}
             placeholder="0"
@@ -70,10 +70,10 @@ const Home = () => {
             data-testid="form-input-fireRate"
             />
 
-            <p className='w-96 h-10 text-2xl mx-5 text-sky-300'>Damage</p>
+            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Damage</p>
 
             <input 
-            className='w-96 h-10 border-sky-500 border rounded-md mb-5'
+            className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="damage" 
             onChange={(e) => setForm({...form, damage: e.target.value})}
             placeholder="0"
@@ -81,10 +81,10 @@ const Home = () => {
             data-testid="form-input-damage"
             />
 
-            <p className='w-96 h-10 text-2xl mx-5 text-sky-300'>Health-Points</p>
+            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Health-Points</p>
 
             <input 
-            className='w-96 h-10 border-sky-500 border rounded-md mb-5'
+            className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="healthPoints" 
             onChange={(e) => setForm({...form, healthPoints: e.target.value})}
             placeholder="0"
@@ -92,10 +92,10 @@ const Home = () => {
             data-testid="form-input-healthPoints"
             />
 
-            <p className='w-96 h-10 text-2xl mx-5 text-sky-300'>Damage-Reduction (Percent)</p>
+            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Damage-Reduction (Percent)</p>
 
             <input 
-            className='w-96 h-10 border-sky-500 border rounded-md mb-5'
+            className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="damageReduction" 
             onChange={(e) => setForm({...form, damageReduction: e.target.value})}
             placeholder="1"
@@ -106,11 +106,11 @@ const Home = () => {
             <button className='w-96 h-10 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300'>Submit</button>
           */}
 
-              <div className='flex w-96 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300'>
+              <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300'>
                 <div className='ml-2'>Projectile-To-Elim:</div>
                 <div className='ml-2'>{AmmoToElimCeiling.toFixed(0)}</div>
               </div>
-              <div className='flex w-96 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300'>
+              <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300'>
                 <div className='ml-2'>Time-To-Elim (s):</div>
                 <div className='ml-2'>{TimeToElim.toFixed(3)}</div>
               </div>
