@@ -7,10 +7,10 @@ import React, {Component} from 'react'
 const Home = () => {
 
   interface FormData {
-    fireRate?: string,
-    damage?: string,
-    healthPoints?: string,
-    damageReduction?: string,
+    fireRate: string,
+    damage: string,
+    healthPoints: string,
+    damageReduction: string,
   }
   const [form, setForm] = useState<FormData>({fireRate: '1',
     damage: '1',
@@ -21,6 +21,16 @@ const Home = () => {
   var AmmoToElim = 0
   var AmmoToElimCeiling = 0
   var TimeToElim = 0
+
+  var hpFloat = parseFloat(form.healthPoints)
+  var drFloat = parseFloat(form.damageReduction)
+  var dFloat = parseFloat(form.damage)
+  var frFloat = parseFloat(form.fireRate)
+
+
+  AmmoToElim = ((hpFloat*(1+drFloat*0.01))/dFloat)
+  AmmoToElimCeiling = Math.ceil( AmmoToElim )
+  TimeToElim = ((1/frFloat)*AmmoToElimCeiling)
 
   //AmmoToElim = ((form.healthPoints*(1+form.damageReduction*0.01))/form.damage)
   //AmmoToElimCeiling = Math.ceil( AmmoToElim )
