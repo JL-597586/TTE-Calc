@@ -60,10 +60,10 @@ const Home = () => {
       </Head>
 
       <main>
-        <h1 className=' flex min-w-screen justify-center items-center text-6xl font-bold text-sky-400 m-2'>
+        <h1 className=' flex min-w-screen justify-center items-center text-5xl font-bold text-sky-400 m-2'>
           
           Elim-Calc
-          <div className='flex w-5'></div>
+          <div className='flex w-4'></div>
           <div className='flex w-10 h-14 bg-sky-400 border rounded-md justify-center grid grid-col-1'>
            
             <div className='flex w-7 h-3 bg-sky-200 border rounded-sm m-1'></div>
