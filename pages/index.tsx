@@ -42,7 +42,7 @@ const Home = () => {
   const [posts, savePosts] = useState<WpnData[]>([{n: 'Sample-Item', fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:1}])
 
   function SaveForm() {
-  savePosts(posts => [...posts, {n:form.name, fr:frFloat, d:dFloat,  hp:hpFloat,  dr:drFloat, ATE:AmmoToElim,  TTE:TimeToElim,}]);
+  savePosts(posts => [...posts, {n:form.name, fr:frFloat, d:dFloat,  hp:hpFloat,  dr:drFloat, ATE:AmmoToElimCeiling,  TTE:TimeToElim,}]);
   }
 
   AmmoToElim = ((hpFloat*(1+drFloat*0.01))/dFloat)
