@@ -75,10 +75,15 @@ const Home = () => {
           <div className='flex w-4'></div>
           <div className='flex w-10 h-14 bg-sky-400 border rounded-md justify-center grid grid-col-1'>
            
-            <div className='flex w-7 h-3 bg-sky-200 border rounded-sm m-1'></div>
-            <div className='flex w-7 h-6 bg-sky-200 border rounded-sm m-1'></div>
+            <div className='flex w-7 h-3 bg-sky-200 border rounded-sm m-1 justify-left items-center'>
+            
+            </div>
+            <div className='flex w-7 h-6 bg-sky-200 border rounded-sm m-1'>
+            </div>
+            
             
           </div>
+          
           
         </h1>
 
@@ -86,14 +91,14 @@ const Home = () => {
 
 
         <div className='fixed min-w-screen'>
-            <div className='mt-60'></div>
-            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-5 text-4xl text-center text-sky-300 rounded-md hover:text-sky-200 hover:bg-sky-500'>↑</button>
+            <div className='mt-96'></div>
+            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-5 text-2xl text-center text-sky-300 rounded-md hover:text-sky-200 hover:bg-sky-500'>↑</button>
         </div>
 
-        <div className='flex min-w-screen items-center flex-col'>
+        <div className='flex min-w-screen items-center justify-center flex-col'>
             
 
-          <form>
+          <form className='ml-4'>
             <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Item-Name</p>
 
             <input 
