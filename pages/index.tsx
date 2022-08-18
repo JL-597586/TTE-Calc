@@ -53,6 +53,14 @@ const Home = () => {
   //AmmoToElimCeiling = Math.ceil( AmmoToElim )
   //TimeToElim = ((1/form?.fireRate)*AmmoToElimCeiling)
 
+  function ScrollToTop() {
+    // Scroll to top logic
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+
   return (
     <div>
       <Head>
@@ -60,6 +68,7 @@ const Home = () => {
       </Head>
 
       <main>
+        
         <h1 className=' flex min-w-screen justify-center items-center text-5xl font-bold text-sky-400 m-2'>
           
           Elim-Calc
@@ -70,11 +79,19 @@ const Home = () => {
             <div className='flex w-7 h-6 bg-sky-200 border rounded-sm m-1'></div>
             
           </div>
+          
         </h1>
 
         <div className='flex min-w-screen justify-center h-10'></div>
 
+
+        <div className='fixed min-w-screen'>
+            <button onClick={ScrollToTop} className='bg-sky-900 h-20 w-10 text-7xl text-center text-sky-500 rounded-md '>↑</button>
+        </div>
+
         <div className='flex min-w-screen items-center flex-col'>
+            
+
           <form>
             <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Item-Name</p>
 
