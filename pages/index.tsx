@@ -12,6 +12,16 @@ const Home = () => {
     healthPoints: string,
     damageReduction: string,
   }
+
+  interface WpnData {
+    fr: number,
+    d: number,
+    hp: number,
+    dr: number,
+    ATE: number,
+    TTE: number,
+  }
+  
   const [form, setForm] = useState<FormData>({fireRate: '4',
     damage: '25',
     healthPoints: '100',
@@ -27,6 +37,11 @@ const Home = () => {
   var dFloat = parseFloat(form.damage)
   var frFloat = parseFloat(form.fireRate)
 
+  const [posts, savePosts] = useState<WpnData[]>([{fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:1}])
+
+  function SaveForm() {
+  savePosts(posts => [...posts, {fr:frFloat, d:dFloat,  hp:hpFloat,  dr:drFloat, ATE:AmmoToElim,  TTE:TimeToElim,}]);
+  }
 
   AmmoToElim = ((hpFloat*(1+drFloat*0.01))/dFloat)
   AmmoToElimCeiling = Math.ceil( AmmoToElim )
@@ -114,8 +129,32 @@ const Home = () => {
                 <div className='ml-2'>Time-To-Elim (s):</div>
                 <div className='ml-2'>{TimeToElim.toFixed(3)}</div>
               </div>
+              <div className='flex justify-center w-80 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300'>
+                <button type="button" onClick={SaveForm} className='mx-2'>Save Item</button>
+                
+              </div>
+
+              <div className='flex flex-col'>
+              {
+               posts.map(({fr,d,hp,dr,ATE,TTE}) => (
+                <li className='flex grid grid-cols-2 text-sky-700 bg-sky-100 w-80 border rounded-md mt-2 mb-2' key={TTE}>
+                  <div>Name: Sample-Item</div>
+                  <div></div>
+                  <div>Fire-Rate: {fr}</div>
+                  <div className='ml-2'>Damage: {d}</div>
+                  <div className=''>Health-Points: {hp}</div>
+                  <div className='ml-2'>Dmg-Reduction: {dr}</div>
+                  <div className=''>Projectile-To-Elim: {ATE}</div>
+                  <div className='ml-2'>Time-To-Elim: {TTE}</div>
+                  <div className='invisible h-2'></div>
+                </li>
+               ))
+              }
+            </div>
 
             </form>
+
+            
 
   
           
