@@ -39,7 +39,7 @@ const Home = () => {
   var dFloat = parseFloat(form.damage)
   var frFloat = parseFloat(form.fireRate)
 
-  const [posts, savePosts] = useState<WpnData[]>([{n: 'Sample-Item', fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:1}])
+  const [posts, savePosts] = useState<WpnData[]>([{n: 'Sample-Item', fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:0.750}])
 
   function SaveForm() {
   savePosts(posts => [...posts, {n:form.name, fr:frFloat, d:dFloat,  hp:hpFloat,  dr:drFloat, ATE:AmmoToElimCeiling,  TTE:TimeToElim,}]);
@@ -47,7 +47,7 @@ const Home = () => {
 
   AmmoToElim = ((hpFloat*(1+drFloat*0.01))/dFloat)
   AmmoToElimCeiling = Math.ceil( AmmoToElim )
-  TimeToElim = ((1/frFloat)*AmmoToElimCeiling)
+  TimeToElim = ((1/frFloat)*(AmmoToElimCeiling-1))
 
   //AmmoToElim = ((form.healthPoints*(1+form.damageReduction*0.01))/form.damage)
   //AmmoToElimCeiling = Math.ceil( AmmoToElim )
@@ -165,8 +165,8 @@ const Home = () => {
                 <div className='ml-2'>Time-To-Elim (s):</div>
                 <div className='ml-2 text-sky-200'>{TimeToElim.toFixed(3)}</div>
               </div>
-              <div className='flex justify-center w-80 h-12 border-sky-500 border rounded-md bg-sky-600 mb-5 text-3xl text-sky-100 active:bg-sky-500'>
-                <button type="button" onClick={SaveForm} className='mx-2'>Save Item</button>
+              <div>
+                <button type="button" onClick={SaveForm} className='flex justify-center items-center w-80 h-12 border-sky-500 border rounded-md bg-sky-600 mb-5 text-3xl text-sky-100 active:bg-sky-500'>Save Item</button>
                 
               </div>
 
