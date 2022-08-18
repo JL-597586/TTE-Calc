@@ -159,11 +159,11 @@ const Home = () => {
 
               <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300 items-center'>
                 <div className='ml-2'>Projectile-To-Elim:</div>
-                <div className='ml-2 text-sky-100'>{AmmoToElimCeiling}</div>
+                <div className='ml-2 text-sky-200'>{AmmoToElimCeiling}</div>
               </div>
               <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300 items-center'>
                 <div className='ml-2'>Time-To-Elim (s):</div>
-                <div className='ml-2 text-sky-100'>{TimeToElim.toFixed(3)}</div>
+                <div className='ml-2 text-sky-200'>{TimeToElim.toFixed(3)}</div>
               </div>
               <div className='flex justify-center w-80 h-12 border-sky-500 border rounded-md bg-sky-600 mb-5 text-3xl text-sky-100 active:bg-sky-500'>
                 <button type="button" onClick={SaveForm} className='mx-2'>Save Item</button>
