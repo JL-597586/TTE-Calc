@@ -92,13 +92,13 @@ const Home = () => {
 
         <div className='fixed min-w-screen'>
             <div className='mt-96'></div>
-            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-5 text-2xl text-center text-sky-300 rounded-md hover:text-sky-200 hover:bg-sky-500'>↑</button>
+            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-6 text-2xl text-center text-sky-300 rounded-md hover:text-sky-200 hover:bg-sky-500'>↑</button>
         </div>
 
         <div className='flex min-w-screen items-center justify-center flex-col'>
             
 
-          <form className='ml-4'>
+          <form className='ml-8'>
             <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Item-Name</p>
 
             <input 
