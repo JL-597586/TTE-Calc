@@ -92,14 +92,14 @@ const Home = () => {
 
         <div className='fixed min-w-screen'>
             <div className='mt-96'></div>
-            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-6 text-2xl text-center text-sky-300 rounded-md active:text-sky-200 active:bg-sky-500'>↑</button>
+            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-8 text-2xl text-center text-sky-300 rounded-md active:text-sky-200 active:bg-sky-500'>↑</button>
         </div>
 
         <div className='flex min-w-screen items-center justify-center flex-col'>
             
 
-          <form className='ml-8'>
-            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Item-Name</p>
+          <form>
+            <p className='w-80 h-10 text-2xl mx-1 text-sky-300'>Item-Name</p>
 
             <input 
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
@@ -110,7 +110,7 @@ const Home = () => {
             data-testid="form-input-name"
             />
 
-            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Fire-Rate</p>
+            <p className='w-80 h-10 text-2xl ml-1 text-sky-300'>Fire-Rate</p>
 
             <input 
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
@@ -121,7 +121,7 @@ const Home = () => {
             data-testid="form-input-fireRate"
             />
 
-            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Damage</p>
+            <p className='w-80 h-10 text-2xl ml-1 text-sky-300'>Damage</p>
 
             <input 
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
@@ -132,7 +132,7 @@ const Home = () => {
             data-testid="form-input-damage"
             />
 
-            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Health-Points</p>
+            <p className='w-80 h-10 text-2xl ml-1 text-sky-300'>Health-Points</p>
 
             <input 
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
@@ -143,7 +143,7 @@ const Home = () => {
             data-testid="form-input-healthPoints"
             />
 
-            <p className='w-80 h-10 text-2xl mx-5 text-sky-300'>Damage-Reduction (Percent)</p>
+            <p className='w-80 h-10 text-2xl ml-1 text-sky-300'>Damage-Reduction (Percent)</p>
 
             <input 
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
