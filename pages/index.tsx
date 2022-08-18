@@ -92,7 +92,7 @@ const Home = () => {
 
         <div className='fixed min-w-screen'>
             <div className='mt-96'></div>
-            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-6 text-2xl text-center text-sky-300 rounded-md hover:text-sky-200 hover:bg-sky-500'>↑</button>
+            <button onClick={ScrollToTop} className='bg-sky-900 h-10 w-6 text-2xl text-center text-sky-300 rounded-md active:text-sky-200 active:bg-sky-500'>↑</button>
         </div>
 
         <div className='flex min-w-screen items-center justify-center flex-col'>
@@ -165,7 +165,7 @@ const Home = () => {
                 <div className='ml-2'>Time-To-Elim (s):</div>
                 <div className='ml-2'>{TimeToElim.toFixed(3)}</div>
               </div>
-              <div className='flex justify-center w-80 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300 hover:bg-sky-500 hover:text-sky-100'>
+              <div className='flex justify-center w-80 h-12 border-sky-500 border rounded-md mb-5 text-3xl text-sky-300 active:bg-sky-500 active:text-sky-100'>
                 <button type="button" onClick={SaveForm} className='mx-2'>Save Item</button>
                 
               </div>
