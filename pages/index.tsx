@@ -159,7 +159,7 @@ const Home = () => {
 
               <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300 items-center'>
                 <div className='ml-2'>Projectile-To-Elim:</div>
-                <div className='ml-2 text-sky-100'>{AmmoToElimCeiling.toFixed(0)}</div>
+                <div className='ml-2 text-sky-100'>{AmmoToElimCeiling}</div>
               </div>
               <div className='flex w-80 h-12 border-sky-500 border rounded-md mb-5 text-2xl text-sky-300 items-center'>
                 <div className='ml-2'>Time-To-Elim (s):</div>
@@ -181,7 +181,8 @@ const Home = () => {
                   <div className=''>Health-Points: {hp}</div>
                   <div className='ml-2'>Dmg-Reduction: {dr}</div>
                   <div className=''>Projectile-To-Elim: {ATE}</div>
-                  <div className='ml-2'>Time-To-Elim: {TTE}</div>
+                  <div className='invisible h-2'></div>
+                  <div>Time-To-Elim: {TTE.toFixed(3)}s</div>
                   <div className='invisible h-2'></div>
                 </li>
                ))
