@@ -24,7 +24,7 @@ const Home = () => {
     TTE: number,
   }
   
-  const [form, setForm] = useState<FormData>({name:'Sample-Name', fireRate: '4',
+  const [form, setForm] = useState<FormData>({name:'Sample-Item', fireRate: '4',
     damage: '25',
     healthPoints: '100',
     damageReduction: '0',});
@@ -39,7 +39,7 @@ const Home = () => {
   var dFloat = parseFloat(form.damage)
   var frFloat = parseFloat(form.fireRate)
 
-  const [posts, savePosts] = useState<WpnData[]>([{n: 'Sample-Name', fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:1}])
+  const [posts, savePosts] = useState<WpnData[]>([{n: 'Sample-Item', fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:1}])
 
   function SaveForm() {
   savePosts(posts => [...posts, {n:form.name, fr:frFloat, d:dFloat,  hp:hpFloat,  dr:drFloat, ATE:AmmoToElim,  TTE:TimeToElim,}]);
@@ -105,7 +105,7 @@ const Home = () => {
             className='w-80 h-10 border-sky-500 border rounded-md mb-5'
             name="name" 
             onChange={(e) => setForm({...form, name: e.target.value})}
-            placeholder="Sample-Name"
+            placeholder="Sample-Item"
             type="string"
             data-testid="form-input-name"
             />
