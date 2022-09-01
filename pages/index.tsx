@@ -22,6 +22,7 @@ const Home = () => {
     dr: number,
     ATE: number,
     TTE: number,
+    id: number,
   }
   
   const [form, setForm] = useState<FormData>({name:'Sample-Item', fireRate: '4',
@@ -39,10 +40,12 @@ const Home = () => {
   var dFloat = parseFloat(form.damage)
   var frFloat = parseFloat(form.fireRate)
 
-  const [posts, savePosts] = useState<WpnData[]>([{n: 'Sample-Item', fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:0.750}])
+//{n: 'Sample-Item', fr:4, d:25,  hp:100,  dr:0, ATE:4,  TTE:0.750, id:0}
+  const [posts, savePosts] = useState<WpnData[]>([])
+  var uniqueID:number = posts.length + 1
 
   function SaveForm() {
-  savePosts(posts => [...posts, {n:form.name, fr:frFloat, d:dFloat,  hp:hpFloat,  dr:drFloat, ATE:AmmoToElimCeiling,  TTE:TimeToElim,}]);
+  savePosts(posts => [...posts, {n:form.name, fr:frFloat, d:dFloat,  hp:hpFloat,  dr:drFloat, ATE:AmmoToElimCeiling,  TTE:TimeToElim, id:uniqueID}]);
   }
 
   AmmoToElim = ((hpFloat*(1+drFloat*0.01))/dFloat)
@@ -59,6 +62,32 @@ const Home = () => {
       top: 0,
       behavior: "smooth"
     })
+  }
+
+  const DisplayList = () => {
+    posts.sort((a,b) => (a.TTE > b.TTE) ? 1 : -1)
+
+    console.log('posts',posts)
+    return(
+      <>
+      {
+               posts.map(({n,fr,d,hp,dr,ATE,TTE,id}) => (
+                <li className='grid grid-cols-2 text-sky-700 bg-sky-100 w-80 border rounded-md mt-2 mb-2' key={id}>
+                  <div>Name: {n}</div>
+                  <div></div>
+                  <div>Fire-Rate: {fr}</div>
+                  <div className='ml-2'>Damage: {d}</div>
+                  <div className=''>Health-Points: {hp}</div>
+                  <div className='ml-2'>Dmg-Reduction: {dr}</div>
+                  <div className=''>Projectile-To-Elim: {ATE}</div>
+                  <div className='invisible h-2'></div>
+                  <div>Time-To-Elim: {TTE.toFixed(3)}s</div>
+                  <div className='invisible h-2'></div>
+                </li>
+               ))
+              }
+      </>
+    )
   }
 
   return (
@@ -171,22 +200,8 @@ const Home = () => {
               </div>
 
               <div className='flex flex-col'>
-              {
-               posts.map(({n,fr,d,hp,dr,ATE,TTE}) => (
-                <li className='flex grid grid-cols-2 text-sky-700 bg-sky-100 w-80 border rounded-md mt-2 mb-2' key={TTE}>
-                  <div>Name: {n}</div>
-                  <div></div>
-                  <div>Fire-Rate: {fr}</div>
-                  <div className='ml-2'>Damage: {d}</div>
-                  <div className=''>Health-Points: {hp}</div>
-                  <div className='ml-2'>Dmg-Reduction: {dr}</div>
-                  <div className=''>Projectile-To-Elim: {ATE}</div>
-                  <div className='invisible h-2'></div>
-                  <div>Time-To-Elim: {TTE.toFixed(3)}s</div>
-                  <div className='invisible h-2'></div>
-                </li>
-               ))
-              }
+              <DisplayList/>
+              
             </div>
 
             </form>
