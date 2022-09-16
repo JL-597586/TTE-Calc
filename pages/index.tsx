@@ -102,7 +102,7 @@ const Home = () => {
           
           Elim-Calc
           <div className='flex w-4'></div>
-          <div className='flex w-10 h-14 bg-sky-400 border rounded-md justify-center grid grid-col-1'>
+          <div className='w-10 h-14 bg-sky-400 border rounded-md justify-center grid grid-col-1'>
            
             <div className='flex w-7 h-3 bg-sky-200 border rounded-sm m-1 justify-left items-center'>
             
