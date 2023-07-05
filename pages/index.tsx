@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import React, { Component } from "react";
+import Login from "./login";
 
 const Home = () => {
   interface FormData {
@@ -121,6 +122,8 @@ const Home = () => {
         </h1>
 
         <div className="flex min-w-screen justify-center h-10"></div>
+
+        <div><Login/></div>
 
         <div className="fixed min-w-screen">
           <div className="mt-96"></div>
