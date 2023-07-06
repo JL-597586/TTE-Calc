@@ -123,8 +123,6 @@ const Home = () => {
 
         <div className="flex min-w-screen justify-center h-10"></div>
 
-        <div><Login/></div>
-
         <div className="fixed min-w-screen">
           <div className="mt-96"></div>
           <button
@@ -136,7 +134,9 @@ const Home = () => {
         </div>
 
         <div className="flex min-w-screen items-center justify-center flex-col">
+          <div><Login/></div>
           <form>
+            <div className="h-8"></div>
             <p className="w-80 h-10 text-2xl mx-1 text-sky-300">Item-Name</p>
 
             <input
