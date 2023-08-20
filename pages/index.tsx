@@ -129,7 +129,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Elim-Calc</title>
+        <title>TTE-Calc</title>
       </Head>
 
       <main>
