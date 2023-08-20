@@ -135,7 +135,7 @@ const Home = () => {
       <main>
         <div className=" flex bg-neutral-800 min-w-screen">
         <h1 className=" flex min-w-screen justify-left items-left text-5xl font-bold text-sky-400 m-3">
-          Elim-Calc
+          TTE-Calc
           <div className="flex w-4"></div>
           <div className="w-10 h-14 bg-sky-400 border rounded-md justify-center grid grid-col-1">
             <div className="flex w-7 h-3 bg-sky-200 border rounded-sm m-1 justify-left items-center"></div>
